@@ -1,0 +1,14 @@
+workflow: /Bioinformatics-Core/caikangwen/workflow/cnmsyc
+# 运行这个pipeline，结果保存在哪个目录下
+refdata: /Bioinformatics-Core/caikangwen/common/refdata-gex-GRCh38-2020-A
+data: /Bioinformatics-Core/sunyuanchen/DATA/LUNG/PRJNA773987
+# 根据输入type会自动识别，如果fastq且样本号大于1则会合并
+multi_process: True
+
+RNAvelocity:
+  done: False
+  make_loom:
+    gtf: /Bioinformatics-Core/caikangwen/common/refdata-gex-GRCh38-2020-A/genes/genes.gtf
+    rgtf: /Bioinformatics-Core/caikangwen/common/hg38_rmsk.gtf
+
+
